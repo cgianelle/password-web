@@ -28,9 +28,29 @@
       margin-right:auto;
     }
 
-    .jumbotron h4 {
+    .jumbotron h5 {
       color: #fff;
       font-family: arkhip
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      background-color: #6D6C6C;
+      border-color: #240A40;
+      font-family: arkhip;
+      border-width: medium;
+    }
+
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-custom.active, .open>.dropdown-toggle.btn-custom {
+      color: #fff;
+      background-color: #240A40;
+      border-color: #6D6C6C;
+      font-family: arkhip;
+      border-width: medium;
+    }
+
+    label {
+      color: #6D6C6C
     }
   </style>
 </head>
@@ -39,12 +59,55 @@
     <div class="container">
         <div class="jumbotron">
             <img src="Logojoy/Logo Files/For Web/png/Color logo - no background.png" width="184" height="200">
-            <h4 class="text-center">Secure Password Generation</h4>
+            <h5 class="text-center">Secure Password Generation</h5>
         </div>
-    </div>
-    <div class="container">
-      <p>This is some text.</p>
-      <p>This is another text.</p>
+        <form>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <label class="text-center" for="pass-length">Password Length</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option>6</option>
+                      <option>8</option>
+                      <option selected="selected">10</option>
+                      <option>12</option>
+                      <option>16</option>
+                      <option>18</option>
+                      <option>20</option>
+                      <option>24</option>
+                      <option>32</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <label>Choose Character Types</label>
+                    <hr class="mb-4">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="same-address">
+                      <label class="custom-control-label" for="same-address">Mixed Case Characters</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="save-info">
+                      <label class="custom-control-label" for="save-info">Numeric Characters</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="save-info">
+                        <label class="custom-control-label" for="save-info">Special Characters</label>
+                    </div>
+                    <hr class="mb-4">
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Generate your secure password</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <output name="result"></output>
+                </div>
+            </div>
+        </form>
     </div>
 
 </body>
